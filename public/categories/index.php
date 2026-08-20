@@ -60,7 +60,7 @@ require_once '/var/www/src/includes/navbar.php';
                     </td>
 
                     <td>
-                        <?= htmlspecialchars($category['Description'] ?? '') ?>
+                        <?= htmlspecialchars($category['Description'] ?? '') ?></td>
                     </td>
 
                     <td>
