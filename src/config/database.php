@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $host = 'db';
 $database = getenv('MYSQL_DATABASE');

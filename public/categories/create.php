@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     } else {
 
-       $sql = "
+        $sql = "
     INSERT INTO categories
         (CategoryName, Description)
     VALUES
@@ -32,8 +32,8 @@ $stmt->bind_param(
 
 if ($stmt->execute()) {
 
-    header('Location: /categories/');
-    exit;
+  header('Location: /categories/');
+exit;
 
 } else {
 
@@ -44,7 +44,6 @@ $stmt->close();
 
     }
 }
-
 require_once '/var/www/src/includes/header.php';
 require_once '/var/www/src/includes/navbar.php';
 
@@ -60,7 +59,6 @@ require_once '/var/www/src/includes/navbar.php';
     </div>
 
 <?php endif; ?>
-
     <form method="post">
 
         <div class="mb-3">
@@ -94,7 +92,7 @@ require_once '/var/www/src/includes/navbar.php';
             Lưu
         </button>
 
-        <a href="/categories/create.php" class="btn btn-secondary">
+        <a href="/categories/" class="btn btn-secondary">
             Hủy
         </a>
 
