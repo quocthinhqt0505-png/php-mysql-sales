@@ -67,9 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $supplierID = $product['SupplierID'];
         $unit = $product['Unit'];
         $price = $product['Price'];
-        $stock = $product['Stock'];
-        $status = $product['Status'];
-        $image = $product['Image'] ?? '';
+        $stock  = $product['Stock'] ?? 0;
+        $status = $product['Status'] ?? 1;
     } else {
         $stmt->close();
         header('Location: /admin/products/');

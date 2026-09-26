@@ -56,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstName = trim($_POST['first_name'] ?? '');
     $birthDate = trim($_POST['birth_date'] ?? '');
     $notes = trim($_POST['notes'] ?? '');
-    
     // Nếu ngày sinh rỗng, gán thành NULL để lưu vào DB (tránh lỗi 0000-00-00)
     if ($birthDate === '') {
         $birthDate = null;

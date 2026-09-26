@@ -24,11 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Xử lý Upload Ảnh nếu người dùng có chọn file
         if (isset($_FILES['photo']) && $_FILES['photo']['error'] !== UPLOAD_ERR_NO_FILE) {
-            
             if ($_FILES['photo']['error'] === UPLOAD_ERR_OK) {
                 $file = $_FILES['photo'];
                 $maxSize = 2 * 1024 * 1024; // 2MB
-
                 if ($file['size'] > $maxSize) {
                     $error = 'File ảnh không được vượt quá 2 MB.';
                 } else {
@@ -63,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Nếu việc kiểm tra thông tin và upload ảnh không có lỗi -> Tiến hành lưu DB
         if ($error === '') {
-            
             // Xử lý ngày sinh rỗng thành NULL
             $birthDateValue = ($birthDate === '') ? null : $birthDate;
             $notesValue = ($notes === '') ? null : $notes;

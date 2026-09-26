@@ -19,9 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/employees/">Nhân viên</a>
                 </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/admin/orders/">Đơn hàng</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/shippers/">Shipper</a>
                 </li>
