@@ -1,7 +1,7 @@
 <?php
 
+require_once '/var/www/src/config/session.php';
 require_once '/var/www/src/config/database.php';
-
 // 3. Lấy danh sách danh mục cho bộ lọc
 $sqlCategories = "
     SELECT
